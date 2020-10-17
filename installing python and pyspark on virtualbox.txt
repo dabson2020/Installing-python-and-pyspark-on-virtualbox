@@ -127,6 +127,8 @@ Open virtualbox
 click settings > Shared folders > others > select the folder you created >auto mount >save
 go to devices > install guest additions (if this is is not visible, download the VBoxGuestAdditions.iso for the version os spark you have and mount it under Storage> Controller:SATA
 Go to terminal
+sudo apt install virtualbox-guest-utils virtualbox-guest-dkms
+Install VBox guest additions
 sudo adduser 'folder_name' vboxsf
 sudo reboot
 Now open the folder
