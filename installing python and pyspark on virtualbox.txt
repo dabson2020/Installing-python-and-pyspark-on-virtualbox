@@ -47,14 +47,31 @@ log in
 If locked, press esc and login with your password
 Ubuntu installed comes with python on it
 go to terminal and type python
-To install jupyter, pip3 install jupyter(if this does not work use pip snap install jupuyter)
+To install jupyter, pip3 install jupyter(if this does not work use pip snap install jupyter)
 IF pip3 is not installed install it with the code below
 sudo apt install python3 -pip
 if this does not work, do the following
 sudo add-apt-repository universe
 sudo apt update
 sudo apt install python3-pip 
-pip3 install jupyter-notebook
+pip3 install jupyter
+
+If there persist error message 'unable to lock directory /var/lib/dpkg, do the following:
+- First find and kill all apt-get or apt processes
+- list the apt processes with grep command stated below:
+     $ ps -A | grep apt
+- Kill the error that has a particular process ID, for example
+     sudo kill -9 2678
+- Delete the lock file
+     sudo rm /var/lib/dpkg/lock
+- Force packages to reconfigure like below:
+     sudo dpkg --configure -a
+- Update your package list
+     sudo apt-get update
+
+Now carry on with the installations
+
+
 
 
 To install spark, we install jave first
